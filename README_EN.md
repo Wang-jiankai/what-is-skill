@@ -1,6 +1,24 @@
 # ⚡ What is Skill?
 
-> **"Skill" expands the boundaries of AI capabilities.** This repository is designed for absolute beginners, helping you thoroughly understand what a Skill is through clear concept explanations and runnable code examples.
+> **"Skill" is a SOP design course for the AI era.** This repository teaches you how to structure domain expertise from human specialists into reusable, AI-executable knowledge packages — not which tools to use, but how to make AI consistently do things the *right* way.
+
+---
+
+> 🌐 **Language**: [中文](./README.md) | [English（当前）](./README_EN.md)
+
+---
+
+## ⚠️ Important: "Skill" Has Multiple Meanings
+
+In the AI world, "Skill" means different things in different contexts:
+
+| Context | Meaning | Example |
+|---------|---------|---------|
+| Claude Code `/skills` | Built-in Claude Code feature | `/skills` to list installed Skills |
+| **Agent Skills (Official Open Standard)** | **This repository's focus**: domain knowledge packaged as SKILL.md | Official standard at agentskills.io |
+| Community usage | Sometimes loosely refers to MCP Tools | Not recommended — causes confusion |
+
+> **This repository focuses on the Agent Skills open standard** — teaching you to write high-quality SKILL.md files that make AI follow your SOP consistently.
 
 ---
 
@@ -11,133 +29,107 @@ This series contains three repositories to help you master the core concepts of 
 | Repository | Topic | One-liner |
 |------------|-------|-----------|
 | 🔗 [what-is-agent](https://github.com/Wang-jiankai/what-is-agent) | **Agent** | AI's "brain" — autonomously plans and executes tasks |
-| 🔗 [what-is-skill](https://github.com/Wang-jiankai/what-is-skill) | **Skill** | AI's "toolbox" — modular plugins that extend capabilities |
-| 🔗 [what-is-mcp](https://github.com/Wang-jiankai/what-is-mcp) | **MCP** | AI's "interface standard" — a bridge to the external world |
+| 🔗 [what-is-skill](https://github.com/Wang-jiankai/what-is-skill) | **Skill** | AI's "SOP manual" — structured domain expertise packaging |
+| 🔗 [what-is-mcp](https://github.com/Wang-jiankai/what-is-mcp) | **MCP** | AI's "interface standard" — bridge to the external world |
 
 ---
 
-## 🔰 What is a Skill?
+## 🔰 What is an Agent Skill?
 
-A **Skill** is a reusable, composable unit of extension that adds new capabilities to an Agent or AI system.
+An **Agent Skill** is a structured "Standard Operating Procedure" (SOP) packaged as a `SKILL.md` file, containing domain expertise that an AI can load and apply when executing specific tasks.
 
-> **Simple analogy:** If an Agent is a smartphone, Skills are the various apps in the App Store.
+### What Problem Does Skill Solve?
 
-### Core Skill Characteristics
+Current AI Agents have a core reliability problem:
 
-| Characteristic | Description |
-|----------------|-------------|
-| **Modular** | Each Skill is an independent functional unit |
-| **Reusable** | Write once, use across multiple Agents |
-| **Composable** | Multiple Skills can work together |
-| **Declarative** | Enable/disable via configuration, not code |
+- Works this time, skips steps next time
+- Same task, wildly different output quality
+- Slight rephrasing breaks the entire workflow
+
+The problem isn't the model — it's the **lack of structured procedural knowledge**.
+
+### Skill vs MCP: The Key Distinction
+
+| | MCP | Agent Skill |
+|--|-----|-------------|
+| **What it solves** | What external tools can AI access? | How should AI do this type of task? |
+| **Nature** | Connection protocol (AI's "hand") | Knowledge packaging (AI's "recipe book") |
+| **Analogy** | USB-C interface | Michelin chef's operating manual |
+| **Relationship** | Can work together | Can work together |
+
+### Core Principle: Progressive Disclosure
+
+```
+level 1 (always loaded): YAML metadata (name + description) — AI decides when to trigger
+level 2 (on-demand): SKILL.md body (Instructions) — detailed procedure steps
+level 3 (if needed): scripts / references — executable code and reference docs
+```
 
 ---
 
 ## 💡 Core Concepts
 
-### 1. Skill Definition
-A Skill consists of a name, description, parameter schema, and execution logic.
+### 1. What is Agent Skill
+Understanding the problem Skill solves and how it differs from MCP.
 
-### 2. Skill Registration
-Register a Skill with the Agent system so it can be discovered and invoked.
+### 2. SKILL.md Structure
+YAML metadata + Markdown body. The anatomy of a real Skill file.
 
-### 3. Skill Invocation
-Trigger Skill execution via natural language or API.
+### 3. Writing High-Quality Instructions
+The core skill: turning expert knowledge into clear, AI-executable steps.
 
-### 4. Skill Chaining
-Chain multiple Skills together and execute them in dependency order.
+### 4. Skill Composition & Chaining
+Combining multiple Skills for complex workflows.
 
-### 5. Built-in Skills
-Learn about system-provided base Skills for quick onboarding.
-
----
-
-## 🛠️ TypeScript Code Examples
-
-### Define a Basic Skill
-
-```typescript
-import { Skill } from "@anthropic-ai/claude-code";
-
-// Define a Skill
-const greetSkill = new Skill({
-  name: "greet",
-  description: "Generates a friendly greeting based on time and username",
-  parameters: {
-    username: { type: "string", required: true },
-    hour: { type: "number", required: false, default: new Date().getHours() }
-  },
-  async execute({ username, hour }) {
-    const timeGreeting =
-      hour < 12 ? "Good morning" :
-      hour < 18 ? "Good afternoon" : "Good evening";
-
-    return `${timeGreeting}, ${username}! Welcome back~`;
-  }
-});
-
-// Use the Skill
-const result = await greetSkill.execute({ username: "Alice" });
-console.log(result); // Output: Good afternoon, Alice! Welcome back~
-```
-
-### Skill Chaining
-
-```typescript
-import { Agent, SkillRegistry } from "@anthropic-ai/claude-code";
-
-// Register multiple Skills
-const registry = new SkillRegistry();
-registry.register(greetSkill);
-registry.register(weatherSkill);
-registry.register(scheduleSkill);
-
-// Create an Agent using skill chaining
-const agent = new Agent({
-  model: "claude-opus-4-6",
-  skillRegistry: registry,
-  systemPrompt: "You are an intelligent assistant. Call Skills in sequence to complete tasks."
-});
-
-// Automatically invoke skill chain
-const result = await agent.run(
-  "First greet user Zhang San, then tell him the weather in Beijing today, and finally check his schedule for today"
-);
-console.log(result);
-```
+### 5. From Team SOP to Skill
+Converting real-world workflows into installable Skills.
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Skill Examples
 
-### Prerequisites
+### A Real High-Quality Skill
 
-- Node.js ≥ 18
-- npm or yarn
-- TypeScript compiler
+```yaml
+---
+name: code-review
+description: Team code review SOP — triggered when user says "review this PR" or "review code"
+---
 
-### Installation
+# Code Review SOP
 
-```bash
-# Clone the repository
-git clone https://github.com/Wang-jiankai/what-is-skill.git
-cd what-is-skill
+## When to Use
+Triggered when user asks for code review or PR review.
 
-# Install dependencies
-npm install
+## Review Order (must follow this sequence)
+
+1. **Security** — SQL injection, XSS, hardcoded secrets, API key exposure
+2. **Correctness** — edge cases, null checks, exception handling
+3. **Performance** — loop optimization, N+1 queries, missing indexes
+4. **Style** — naming conventions, comment completeness
+
+## Output Format
+
+Must include these three sections:
+
+### 🔴 Critical Issues
+(if any)
+
+### 🟡 Suggested Improvements
+(if any)
+
+### ✅ Overall Assessment
+- Excellent / Approved / Needs Changes
 ```
 
-### Run Examples
+### Skill File Structure
 
-```bash
-# Compile TypeScript
-npx tsc
-
-# Run basic example
-npx ts-node examples/01-basic.ts
-
-# Run skill chaining example
-npx ts-node examples/02-chaining.ts
+```
+my-skill/
+├── SKILL.md          # Required: YAML metadata + Instructions
+├── scripts/          # Optional: executable scripts
+├── references/       # Optional: detailed reference docs
+└── assets/           # Optional: templates, images
 ```
 
 ---
@@ -149,89 +141,89 @@ what-is-skill/
 ├── README.md              # Project overview (Chinese)
 ├── README_EN.md          # Project overview (English)
 ├── LICENSE               # MIT License
-├── package.json          # Project dependencies
-├── tsconfig.json         # TypeScript configuration
-├── .gitignore            # Git ignore rules
 │
-├── concepts/             # 📚 Core concept articles (read with assets/ for best experience)
+├── concepts/             # 📚 Core concept articles
 │   ├── 01-what-is-skill.md
-│   ├── 02-registration.md
-│   ├── 03-invocation.md
-│   ├── 04-chaining.md
-│   └── 05-built-in-skills.md
+│   ├── 02-skill-structure.md
+│   ├── 03-writing-instructions.md
+│   ├── 04-skill-composition.md
+│   └── 05-real-world-practice.md
 │
-├── examples/             # 💻 Runnable code examples (each maps to one concept)
-│   ├── 01-basic.ts               # Maps to concepts/01: Skill definition basics
-│   ├── 02-registration.ts       # Maps to concepts/02: Skill registration
-│   ├── 03-invocation.ts         # Maps to concepts/03: Skill invocation
-│   ├── 04-chaining.ts           # Maps to concepts/04: Skill chaining
-│   └── 05-built-in.ts           # Maps to concepts/05: Built-in Skills
+├── examples/             # 💡 Real Skill examples (SKILL.md files)
+│   ├── 01-code-review-skill.md
+│   ├── 02-meeting-notes-skill.md
+│   ├── 03-api-design-skill.md
+│   ├── 04-debug-skill.md
+│   └── 05-data-analysis-skill.md
 │
-├── exercises/             # 🏋️ Exercises (one per concepts/ chapter)
+├── exercises/           # 🏋️ Exercises
 │   ├── 01-basic-exercise.md
-│   ├── 02-registration-exercise.md
-│   ├── 03-invocation-exercise.md
-│   ├── 04-chaining-exercise.md
-│   └── 05-built-in-exercise.md
+│   ├── 02-structure-exercise.md
+│   ├── 03-instructions-exercise.md
+│   ├── 04-composition-exercise.md
+│   └── 05-practice-exercise.md
 │
-├── references/            # 📝 Exercise reference solutions (check after attempting)
-│   ├── 01-basic-solution.ts
-│   ├── 02-registration-solution.ts
-│   ├── 03-invocation-solution.ts
-│   ├── 04-chaining-solution.ts
-│   └── 05-built-in-solution.ts
-│
-└── assets/                # 🖼️ Architecture & flow diagrams (referenced by concepts/)
-    ├── skill-architecture.png       # Skill core architecture (read with concepts/01)
-    ├── registration-flow.png        # Registration flow (read with concepts/02)
-    ├── invocation-diagram.png       # Invocation diagram (read with concepts/03)
-    ├── chaining-diagram.png         # Skill chaining diagram (read with concepts/04)
-    └── built-in-overview.png        # Built-in Skills overview (read with concepts/05)
+└── references/          # 📝 Reference solutions
+    ├── 01-basic-solution.md
+    ├── 02-structure-solution.md
+    ├── 03-instructions-solution.md
+    ├── 04-composition-solution.md
+    └── 05-practice-solution.md
 ```
 
-### Folder Responsibilities
+> **Note**: The Skill repository's core artifact is `.md` files (SKILL.md), not code. All examples are real, installable Skill files.
 
-| Folder | Content | Purpose |
-|--------|---------|---------|
-| `concepts/` | Theory articles, one per chapter | Build conceptual foundation |
-| `examples/` | Runnable code, with concept mapping in header | Learn by doing |
-| `exercises/` | Progressive exercises, one per chapter | Reinforce learning |
-| `references/` | Reference solutions for exercises | Self-check after attempting |
-| `assets/` | Diagrams referenced by `concepts/` articles | Visual aid |
+---
 
-### How to Use This Repository
+## 🚀 Getting Started
 
-Follow this path through the material:
+### Install a Skill
 
-```
-Step 1  →  Read concepts/01 introductory article
-           ↓
-Step 2  →  Run examples/01 first code sample
-           ↓
-Step 3  →  Complete exercises/01 corresponding exercise
-           ↓
-Step 4  →  Check references/01 reference solution (self-review)
-           ↓
-Step 5  →  Move to next chapter (concepts/02 → examples/02 → ...)
+Skills are folder-based. Three ways to install:
 
-Repeat until all 5 chapters are complete.
+**Method 1: Project-level**
+```bash
+mkdir -p ./.claude/skills/my-skill
+# Place SKILL.md inside
 ```
 
-> **Tip:** Exercise difficulty increases with each chapter. Try to work through exercises independently before consulting `references/`.
+**Method 2: User-level (global)**
+```bash
+mkdir -p ~/.claude/skills/my-skill
+```
+
+**Method 3: Via Claude Code command**
+```
+/plugin install xxx@anthropic-agent-skills
+```
+
+### Verify Installation
+
+In Claude Code:
+```
+/skills
+```
+Shows all installed Skills.
+
+Or trigger directly:
+```
+review this PR
+```
+AI will detect and load the matching Skill.
 
 ---
 
 ## 📖 Further Learning
 
-- [Claude Skill Official Docs](https://docs.anthropic.com/claude-code/skills)
-- [Skill Development Guide](https://github.com/anthropics/claude-code/tree/main/skills)
-- [Awesome Claude Skills](https://github.com/topics/claude-skill)
+- [Agent Skills Official Standard](https://agentskills.io)
+- [Anthropic Skills Official Repo](https://github.com/anthropics/skills)
+- [Claude Code Skills Documentation](https://docs.anthropic.com/claude-code/skills)
 
 ---
 
 ## 🤝 Contributing
 
-Issues and Pull Requests are welcome!
+Submit your own Skills! If you have a work SOP to share, just open a PR.
 
 ---
 
