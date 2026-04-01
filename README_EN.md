@@ -47,6 +47,9 @@ Trigger Skill execution via natural language or API.
 ### 4. Skill Chaining
 Chain multiple Skills together and execute them in dependency order.
 
+### 5. Built-in Skills
+Learn about system-provided base Skills for quick onboarding.
+
 ---
 
 ## 🛠️ TypeScript Code Examples
@@ -103,22 +106,6 @@ const result = await agent.run(
 console.log(result);
 ```
 
-### Built-in Skill Examples
-
-```typescript
-import { builtInSkills } from "@anthropic-ai/claude-code";
-
-// List all built-in Skills
-console.log(builtInSkills.list());
-
-// Built-in Skills include:
-// - web_search: Web search
-// - file_read: File reading
-// - file_write: File writing
-// - code_execute: Code execution
-// - shell_command: Shell command execution
-```
-
 ---
 
 ## 🚀 Getting Started
@@ -147,11 +134,90 @@ npm install
 npx tsc
 
 # Run basic example
-npx ts-node examples/basic.ts
+npx ts-node examples/01-basic.ts
 
 # Run skill chaining example
-npx ts-node examples/chaining.ts
+npx ts-node examples/02-chaining.ts
 ```
+
+---
+
+## 📂 Repository Structure
+
+```
+what-is-skill/
+├── README.md              # Project overview (Chinese)
+├── README_EN.md          # Project overview (English)
+├── LICENSE               # MIT License
+├── package.json          # Project dependencies
+├── tsconfig.json         # TypeScript configuration
+├── .gitignore            # Git ignore rules
+│
+├── concepts/             # 📚 Core concept articles (read with assets/ for best experience)
+│   ├── 01-what-is-skill.md
+│   ├── 02-registration.md
+│   ├── 03-invocation.md
+│   ├── 04-chaining.md
+│   └── 05-built-in-skills.md
+│
+├── examples/             # 💻 Runnable code examples (each maps to one concept)
+│   ├── 01-basic.ts               # Maps to concepts/01: Skill definition basics
+│   ├── 02-registration.ts       # Maps to concepts/02: Skill registration
+│   ├── 03-invocation.ts         # Maps to concepts/03: Skill invocation
+│   ├── 04-chaining.ts           # Maps to concepts/04: Skill chaining
+│   └── 05-built-in.ts           # Maps to concepts/05: Built-in Skills
+│
+├── exercises/             # 🏋️ Exercises (one per concepts/ chapter)
+│   ├── 01-basic-exercise.md
+│   ├── 02-registration-exercise.md
+│   ├── 03-invocation-exercise.md
+│   ├── 04-chaining-exercise.md
+│   └── 05-built-in-exercise.md
+│
+├── references/            # 📝 Exercise reference solutions (check after attempting)
+│   ├── 01-basic-solution.ts
+│   ├── 02-registration-solution.ts
+│   ├── 03-invocation-solution.ts
+│   ├── 04-chaining-solution.ts
+│   └── 05-built-in-solution.ts
+│
+└── assets/                # 🖼️ Architecture & flow diagrams (referenced by concepts/)
+    ├── skill-architecture.png       # Skill core architecture (read with concepts/01)
+    ├── registration-flow.png        # Registration flow (read with concepts/02)
+    ├── invocation-diagram.png       # Invocation diagram (read with concepts/03)
+    ├── chaining-diagram.png         # Skill chaining diagram (read with concepts/04)
+    └── built-in-overview.png        # Built-in Skills overview (read with concepts/05)
+```
+
+### Folder Responsibilities
+
+| Folder | Content | Purpose |
+|--------|---------|---------|
+| `concepts/` | Theory articles, one per chapter | Build conceptual foundation |
+| `examples/` | Runnable code, with concept mapping in header | Learn by doing |
+| `exercises/` | Progressive exercises, one per chapter | Reinforce learning |
+| `references/` | Reference solutions for exercises | Self-check after attempting |
+| `assets/` | Diagrams referenced by `concepts/` articles | Visual aid |
+
+### How to Use This Repository
+
+Follow this path through the material:
+
+```
+Step 1  →  Read concepts/01 introductory article
+           ↓
+Step 2  →  Run examples/01 first code sample
+           ↓
+Step 3  →  Complete exercises/01 corresponding exercise
+           ↓
+Step 4  →  Check references/01 reference solution (self-review)
+           ↓
+Step 5  →  Move to next chapter (concepts/02 → examples/02 → ...)
+
+Repeat until all 5 chapters are complete.
+```
+
+> **Tip:** Exercise difficulty increases with each chapter. Try to work through exercises independently before consulting `references/`.
 
 ---
 

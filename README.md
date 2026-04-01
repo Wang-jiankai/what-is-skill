@@ -47,6 +47,9 @@ Skill 由名称、描述、参数 schema 和执行逻辑组成。
 ### 4. 技能链（Skill Chaining）
 将多个 Skill 按依赖顺序串联执行。
 
+### 5. 内置技能（Built-in Skills）
+了解系统自带的基础 Skill，快速上手。
+
 ---
 
 ## 🛠️ TypeScript 代码示例
@@ -103,22 +106,6 @@ const result = await agent.run(
 console.log(result);
 ```
 
-### 内置 Skill 示例
-
-```typescript
-import { builtInSkills } from "@anthropic-ai/claude-code";
-
-// 查看所有内置 Skill
-console.log(builtInSkills.list());
-
-// 内置 Skill 包括:
-// - web_search: 网页搜索
-// - file_read: 文件读取
-// - file_write: 文件写入
-// - code_execute: 代码执行
-// - shell_command: Shell 命令执行
-```
-
 ---
 
 ## 🚀 运行说明
@@ -147,11 +134,90 @@ npm install
 npx tsc
 
 # 运行基础示例
-npx ts-node examples/basic.ts
+npx ts-node examples/01-basic.ts
 
 # 运行技能链示例
-npx ts-node examples/chaining.ts
+npx ts-node examples/02-chaining.ts
 ```
+
+---
+
+## 📂 仓库目录结构
+
+```
+what-is-skill/
+├── README.md              # 项目说明（中文）
+├── README_EN.md          # 项目说明（英文）
+├── LICENSE               # MIT 开源许可证
+├── package.json          # 项目依赖配置
+├── tsconfig.json         # TypeScript 编译配置
+├── .gitignore            # Git 忽略文件
+│
+├── concepts/             # 📚 核心概念文章（与 assets/ 图片配合阅读效果更佳）
+│   ├── 01-what-is-skill.md
+│   ├── 02-registration.md
+│   ├── 03-invocation.md
+│   ├── 04-chaining.md
+│   └── 05-built-in-skills.md
+│
+├── examples/             # 💻 可运行代码示例（每个文件对应一个核心概念）
+│   ├── 01-basic.ts               # 对应 concepts/01：Skill 基础定义
+│   ├── 02-registration.ts       # 对应 concepts/02：技能注册机制
+│   ├── 03-invocation.ts         # 对应 concepts/03：技能调用方式
+│   ├── 04-chaining.ts           # 对应 concepts/04：技能链编排
+│   └── 05-built-in.ts           # 对应 concepts/05：内置技能使用
+│
+├── exercises/             # 🏋️ 练习题（每道题对应一篇 concepts/ 文章）
+│   ├── 01-basic-exercise.md
+│   ├── 02-registration-exercise.md
+│   ├── 03-invocation-exercise.md
+│   ├── 04-chaining-exercise.md
+│   └── 05-built-in-exercise.md
+│
+├── references/            # 📝 练习参考答案（建议先独立完成再对照）
+│   ├── 01-basic-solution.ts
+│   ├── 02-registration-solution.ts
+│   ├── 03-invocation-solution.ts
+│   ├── 04-chaining-solution.ts
+│   └── 05-built-in-solution.ts
+│
+└── assets/                # 🖼️ 架构图、流程图（供 concepts/ 文章引用）
+    ├── skill-architecture.png       # Skill 核心架构图（配合 concepts/01 阅读）
+    ├── registration-flow.png        # 注册流程图（配合 concepts/02 阅读）
+    ├── invocation-diagram.png       # 调用流程图（配合 concepts/03 阅读）
+    ├── chaining-diagram.png         # 技能链编排图（配合 concepts/04 阅读）
+    └── built-in-overview.png        # 内置技能总览图（配合 concepts/05 阅读）
+```
+
+### 文件夹职责
+
+| 文件夹 | 内容 | 用途 |
+|--------|------|------|
+| `concepts/` | 核心理论文章，每篇讲一个知识点 | 帮助新手建立概念框架 |
+| `examples/` | 精心设计的可运行代码，顶部标注对应概念 | 边学边实践 |
+| `exercises/` | 难度递进的练习（与 concepts/ 章节一一对应）| 巩固学习效果 |
+| `references/` | 对应练习的参考解答 | 供对照自查 |
+| `assets/` | 架构图、流程图，供 `concepts/` 文章引用 | 辅助理解 |
+
+### 如何使用本仓库
+
+推荐按以下路径依次学习：
+
+```
+第 1 步  →  阅读 concepts/01 入门文章
+           ↓
+第 2 步  →  运行 examples/01 第一个代码示例
+           ↓
+第 3 步  →  完成 exercises/01 对应练习
+           ↓
+第 4 步  →  查阅 references/01 参考答案（自查）
+           ↓
+第 5 步  →  进入下一章（concepts/02 → examples/02 → ...）
+
+循环往复，直至完成全部 5 章。
+```
+
+> **提示：** `exercises/` 的习题难度随章节递增。建议先独立思考，实在卡住再看 `references/`。
 
 ---
 
