@@ -1,6 +1,6 @@
 # ⚡ What is Skill?
 
-> **"Skill" is a SOP design course for the AI era.** This repository teaches you how to structure domain expertise from human specialists into reusable, AI-executable knowledge packages — not which tools to use, but how to make AI consistently do things the *right* way.
+> **"Skill" is a SOP design methodology for the AI era — turning expert experience into reusable Standard Operating Procedures.** This repository explores the concepts and practice of Skill, teaching you how to structure domain expertise from human specialists into reusable, AI-executable knowledge packages — not which tools to use, but how to make AI consistently do things the *right* way.
 
 ---
 
