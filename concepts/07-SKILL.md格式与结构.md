@@ -1,16 +1,14 @@
-# 02 | SKILL.md 的结构
+# 07 | SKILL.md 格式与结构
 
 ## 🎯 学习目标
 
 - 掌握 SKILL.md 的标准结构
-- 理解 YAML 元数据的写法
+- 理解 YAML 元数据的规范写法
 - 理解 Markdown 正文的层次结构
 
 ---
 
-## 📖 概念讲解
-
-### SKILL.md 的两个部分
+## SKILL.md 的两个部分
 
 SKILL.md 文件分两部分：
 
@@ -29,7 +27,9 @@ description: 简短描述
 **YAML 部分**（`---` 之间）：机器可读，元数据
 **Markdown 部分**：人类可读，核心内容
 
-### YAML 元数据
+---
+
+## YAML 元数据
 
 ```yaml
 ---
@@ -46,7 +46,9 @@ description: 团队代码审查 SOP。当用户说 "review this PR" 或 "审查�
 | `name` | ✅ | Skill 名称，英文、snake-case |
 | `description` | ✅ | 一句话描述，建议包含触发关键词 |
 
-### Markdown 正文结构
+---
+
+## Markdown 正文结构
 
 一个高质量的 SKILL.md 正文，通常包含以下章节：
 
@@ -104,4 +106,4 @@ description: 团队代码审查 SOP。当用户说 "review this PR" 或 "审查�
 - [ ] 能写出规范格式的 YAML 元数据吗？
 - [ ] 能判断一个 SKILL.md 正文是结构化还是模糊的吗？
 
-继续学习：[03 - 写好 Instructions](./03-writing-instructions.md)
+继续学习：[08 - 渐进式披露原理](./08-渐进式披露原理.md)

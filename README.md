@@ -14,11 +14,12 @@
 
 | 语境 | 含义 | 示例 |
 |------|------|------|
-| Claude Code `/skills` 命令 | Claude Code 的内置 Skill 功能 | `/skills` 查看已装 Skill |
-| **Agent Skills（官方开放标准）** | **本仓库教学内容**：把领域知识打包成 SKILL.md 文件 | 官方发布在 agentskills.io |
-| 民间泛称 | 有时把 MCP Tool 也叫 Skill | 容易混淆，不推荐 |
+| Claude Code 内置 Skill | CLI 内置的专门化子代理 | `/ask`、`/search`、`/loop` |
+| 自定义斜杠命令 | 用户封装的快捷命令 | `commands.json` 中定义的 `/xxx` |
+| Plugin Skill | 插件中封装的子代理 | 插件 `skills/` 目录下的 Skill |
+| **Agent Skills（官方开放标准）** | **把领域知识打包成 SKILL.md 文件** | agentskills.io 发布的 Skill |
 
-> **本仓库聚焦 Agent Skills 开放标准**，教你写高质量的 SKILL.md，让 AI 按你的 SOP 稳定工作。
+> **本仓库同时覆盖 Claude Code Skill 机制（立即能用）和 Agent Skills 开放标准（面向未来）**，让你既能用好 Claude Code 今天提供的 skill 能力，又能掌握跨平台的标准规范。
 
 ---
 
@@ -31,6 +32,31 @@
 | 🔗 [what-is-agent](https://github.com/Wang-jiankai/what-is-agent) | **Agent** | AI 的"大脑"，能自主规划与执行任务 |
 | 🔗 [what-is-skill](https://github.com/Wang-jiankai/what-is-skill) | **Skill** | AI 的"SOP 手册"，把专家经验结构化打包 |
 | 🔗 [what-is-mcp](https://github.com/Wang-jiankai/what-is-mcp) | **MCP** | AI 的"接口标准"，连接外部世界的桥梁 |
+
+---
+
+## 📖 课程大纲（11 章）
+
+### Part 1：Claude Code Skill 机制（立即能用）
+
+| 章节 | 主题 | 一句话 |
+|------|------|--------|
+| 01 | [Skill 的多种含义](./concepts/01-skill的多重含义.md) | 厘清 Claude Code Skill 和 Agent Skills 的区别 |
+| 02 | [内置 Skill 深度用法](./concepts/02-内置skill深度用法.md) | `/ask`、`/search`、`/loop`、`/simplify` 进阶技巧 |
+| 03 | [自定义斜杠命令](./concepts/03-自定义斜杠命令.md) | 用 `commands.json` 封装高频操作 |
+| 04 | [Plugin Skill 开发](./concepts/04-plugin-skill开发.md) | 在插件中创建 Skill 并调用工具 |
+| 05 | [Skill 编排与组合](./concepts/05-skill编排与组合.md) | 多 Skill 协作完成复杂任务 |
+| 06 | [团队 SOP 转斜杠命令](./concepts/06-团队SOP转斜杠命令.md) | 把团队标准流程变成一键命令 |
+
+### Part 2：Agent Skills 开放标准（面向未来）
+
+| 章节 | 主题 | 一句话 |
+|------|------|--------|
+| 07 | [SKILL.md 格式与结构](./concepts/07-SKILL.md格式与结构.md) | YAML 元数据 + Markdown 正文 |
+| 08 | [渐进式披露原理](./concepts/08-渐进式披露原理.md) | Level 1/2/3 按需加载设计 |
+| 09 | [写好 Instructions](./concepts/09-写好Instructions.md) | 把专家经验结构化、不模糊 |
+| 10 | [Skill 编排与发布](./concepts/10-Skill编排与发布.md) | 多 Skill 协作 + agentskills.io 发布 |
+| 11 | [发布你的第一个 Skill](./concepts/11-发布你的第一个Skill.md) | 从选题到发布的完整实战 |
 
 ---
 
@@ -48,15 +74,6 @@
 
 问题不在模型，而在**没有把"怎么做"的流程固化下来**。
 
-### Skill 和 MCP 的本质区别
-
-| | MCP | Agent Skill |
-|--|-----|------------|
-| **解决什么问题** | AI 能访问什么外部工具 | AI 应该怎么做某类任务 |
-| **本质** | 连接协议（AI 的"手"） | 知识打包（AI 的"技能书"） |
-| **类比** | USB-C 接口 | 米其林厨师的操作手册 |
-| **关系** | 可以组合用 | 可以组合用 |
-
 ### Skill 的核心原理
 
 ```
@@ -69,69 +86,32 @@ level 3（必要时加载）：scripts / references — 脚本和参考资料
 
 ---
 
-## 💡 核心概念
+## 🚀 快速开始
 
-### 1. SKILL.md 结构
-Skill 的核心文件。YAML 元数据 + Markdown 说明。
+### 方式一：学习 Claude Code Skill（今天就能用）
 
-### 2. 渐进式披露
-平时只加载 name/description，按需再加载完整内容。
+```bash
+# 查看内置 Skill
+/help
 
-### 3. 高质量 Instructions
-把专家经验写成清晰的步骤，不依赖模型"即兴发挥"。
-
-### 4. Skill 的编排与组合
-多个 Skill 可以组合使用，按顺序或并行执行。
-
-### 5. 从团队 SOP 到 Skill
-把真实工作中的标准流程转成 Skill，实现 AI 自动化。
-
----
-
-## 🛠️ Skill 示例
-
-### 一个真实的高质量 Skill
-
-```yaml
----
-name: code-review
-description: 团队代码审查 SOP——当用户说 "review this PR" 或 "审查代码" 时触发
----
-
-# Code Review SOP
-
-## 适用场景
-用户让你审查代码或 review Pull Request。
-
-## 审查顺序（必须按此顺序）
-
-1. **安全性** — SQL 注入、XSS、敏感信息泄露、API 密钥硬编码
-2. **逻辑正确性** — 边界条件、空指针、异常处理
-3. **性能** — 循环优化、N+1 查询、数据库索引
-4. **代码风格** — 命名规范、注释完整性
-
-## 输出格式
-
-必须包含以下三部分：
-
-### 🔴 严重问题
-（如果有）
-
-### 🟡 建议改进
-（如果有）
-
-### ✅ 总评
-- 优秀 / 通过 / 需要修改
+# 使用斜杠命令
+/ask 这个模块怎么实现的？
+/search 找出所有包含 token 的文件
+/loop 每5分钟检查一次部署状态
 ```
 
-### Skill 的文件结构
+### 方式二：创建自定义斜杠命令
 
+```bash
+mkdir -p ~/.claude
+# 创建 commands.json，添加你的斜杠命令
 ```
-my-skill/
-├── SKILL.md          # 必须：YAML 元数据 + Instructions
-├── scripts/          # 可选：自动化脚本（可执行）
-├── references/       # 可选：详细参考资料
-└── assets/          # 可选：模板、图片
+
+### 方式三：学习 Agent Skills 标准
+
+```bash
+mkdir -p ~/.claude/skills/my-skill
+# 创建 SKILL.md，开始编写你的第一个 Skill
 ```
 
 ---
@@ -144,14 +124,20 @@ what-is-skill/
 ├── README_EN.md          # 项目说明（英文）
 ├── LICENSE               # MIT 开源许可证
 │
-├── concepts/             # 📚 核心概念文章
-│   ├── 01-what-is-skill.md
-│   ├── 02-skill-structure.md
-│   ├── 03-writing-instructions.md
-│   ├── 04-skill-composition.md
-│   └── 05-real-world-practice.md
+├── concepts/             # 📚 核心概念文章（11 章）
+│   ├── 01-skill的多重含义.md
+│   ├── 02-内置skill深度用法.md
+│   ├── 03-自定义斜杠命令.md
+│   ├── 04-plugin-skill开发.md
+│   ├── 05-skill编排与组合.md
+│   ├── 06-团队SOP转斜杠命令.md
+│   ├── 07-SKILL.md格式与结构.md
+│   ├── 08-渐进式披露原理.md
+│   ├── 09-写好Instructions.md
+│   ├── 10-Skill编排与发布.md
+│   └── 11-发布你的第一个Skill.md
 │
-├── examples/             # 💡 真实 Skill 示例（SKILL.md 文件）
+├── examples/             # 💡 Skill 示例
 │   ├── 01-code-review-skill.md
 │   ├── 02-meeting-notes-skill.md
 │   ├── 03-api-design-skill.md
@@ -159,60 +145,11 @@ what-is-skill/
 │   └── 05-data-analysis-skill.md
 │
 ├── exercises/           # 🏋️ 练习题
-│   ├── 01-basic-exercise.md
-│   ├── 02-structure-exercise.md
-│   ├── 03-instructions-exercise.md
-│   ├── 04-composition-exercise.md
-│   └── 05-practice-exercise.md
+│   └── ...
 │
 └── references/          # 📝 参考答案
-    ├── 01-basic-solution.md
-    ├── 02-structure-solution.md
-    ├── 03-instructions-solution.md
-    ├── 04-composition-solution.md
-    └── 05-practice-solution.md
+    └── ...
 ```
-
-> **注意**：Skill 仓库的核心产物是 `.md` 文件（SKILL.md），不是 TypeScript 代码。所有 examples 都是真实的、可直接安装使用的 Skill。
-
----
-
-## 🚀 运行说明
-
-### 安装 Skill
-
-Skill 以文件夹形式存在，安装方式有三种：
-
-**方式一：放到项目目录（项目级）**
-```bash
-# 在项目根目录下创建
-mkdir -p ./.claude/skills/my-skill
-# 把 SKILL.md 放进去即可
-```
-
-**方式二：放到用户目录（全局）**
-```bash
-mkdir -p ~/.claude/skills/my-skill
-```
-
-**方式三：用 Claude Code 命令安装**
-```
-/plugin install xxx@anthropic-agent-skills
-```
-
-### 验证 Skill 是否生效
-
-在 Claude Code 中问：
-```
-/skills
-```
-可以看到已安装的 Skill 列表。
-
-或在对话中直接触发：
-```
-帮我 review 这个 PR
-```
-AI 会自动识别并加载对应的 Skill。
 
 ---
 
@@ -226,10 +163,10 @@ AI 会自动识别并加载对应的 Skill。
 
 ## 🤝 贡献
 
-欢迎提交你写的 Skill！如果你有工作中的 SOP 想分享，提交 PR 即可。
+欢迎提交你写的 Skill！如果你的仓库教的内容对你有帮助，欢迎提交 PR 分享你的学习成果或补充内容。
 
 ---
 
 ## 📄 许可证
 
-MIT License © 2024 Wang-jiankai
+MIT License © 2024-2026 Wang-jiankai

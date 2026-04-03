@@ -1,16 +1,15 @@
-# 04 | Skill 的编排与组合
+# 10 | Skill 编排与发布
 
 ## 🎯 学习目标
 
-- 理解多个 Skill 如何协同工作
+- 理解多个 Agent Skill 如何协同工作
 - 掌握 Skill 的触发优先级设计
-- 学会设计 Skill 之间的依赖关系
+- 学会避免 Skill 冲突
+- 掌握发布 Skill 到 agentskills.io 的流程
 
 ---
 
-## 📖 概念讲解
-
-### 为什么要组合 Skill？
+## 为什么要组合 Skill？
 
 现实任务往往需要多个领域的知识：
 
@@ -25,9 +24,12 @@
 
 一个 Skill 装不下所有知识，就需要**编排与组合**。
 
-### Skill 之间的两种关系
+---
 
-**并行关系**：
+## Skill 之间的两种关系
+
+### 并行关系
+
 多个 Skill 都相关，AI 自主决定使用哪些。
 
 ```
@@ -41,7 +43,8 @@
 AI 根据需求自主选择需要的 Skill
 ```
 
-**串行关系**：
+### 串行关系
+
 前一个 Skill 的输出，是后一个的输入。
 
 ```
@@ -58,7 +61,9 @@ Skill 链：
     ↓ 输出：Slack 消息
 ```
 
-### 触发优先级
+---
+
+## 触发优先级
 
 当多个 Skill 都可能匹配时，AI 会选择最相关的一个。但可以通过命名和描述来暗示优先级。
 
@@ -72,7 +77,9 @@ name: code-design
 description: 通用代码设计原则。
 ```
 
-### 避免 Skill 冲突
+---
+
+## 避免 Skill 冲突
 
 如果两个 Skill 对同一个任务有不同要求，AI 会困惑。
 
@@ -106,7 +113,79 @@ Skill B：
 
 ---
 
-## 💡 生活中的类比
+## Skill 的安装
+
+### 项目级安装
+
+```bash
+mkdir -p ./.claude/skills/my-skill
+# 把 SKILL.md 放进去即可
+```
+
+### 用户级安装
+
+```bash
+mkdir -p ~/.claude/skills/my-skill
+```
+
+### 验证安装
+
+```
+/skills
+```
+
+---
+
+## 发布 Skill 到 agentskills.io
+
+### 发布条件
+
+- 你的 Skill 必须是完整的 SKILL.md
+- 建议包含 scripts/、references/ 等资源（可选）
+- Skill 需要有实际价值，不是通用模板
+
+### 发布流程
+
+1. **准备 Skill 目录**
+
+```
+my-skill/
+├── SKILL.md
+├── scripts/          # 可选
+├── references/       # 可选
+└── assets/          # 可选
+```
+
+2. **编写规范的 SKILL.md**
+
+```yaml
+---
+name: my-skill
+description: 一句话描述 Skill 的功能和触发条件
+---
+
+# My Skill
+
+## When to Use
+## Steps
+## Output Format
+## Examples
+```
+
+3. **测试 Skill**
+
+在 Claude Code 中实际使用，确认：
+- 触发条件正确
+- 步骤清晰
+- 输出格式符合预期
+
+4. **提交到 agentskills.io**
+
+访问 agentskills.io 查看具体的提交流程和要求。
+
+---
+
+## 生活中的类比
 
 Skill 组合就像**餐厅后厨的分工单**：
 
@@ -124,6 +203,7 @@ Skill 组合就像**餐厅后厨的分工单**：
 1. **并行**：多个 Skill 都相关，AI 自主选择
 2. **串行**：前一个输出是后一个输入，形成链
 3. **避免冲突**：边界要清晰，同一件事只有一个正确答案
+4. **发布**：完整的 SKILL.md + 测试验证 → agentskills.io
 
 ---
 
@@ -132,4 +212,4 @@ Skill 组合就像**餐厅后厨的分工单**：
 - [ ] 能设计一个多 Skill 协作的复杂任务吗？
 - [ ] 能发现并解决 Skill 之间的冲突吗？
 
-继续学习：[05 - 实战：从团队 SOP 到 Skill](./05-real-world-practice.md)
+继续学习：[11 - 发布你的第一个 Skill](./11-发布你的第一个Skill.md)

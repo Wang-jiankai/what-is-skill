@@ -1,4 +1,4 @@
-# 03 | 写好 Instructions
+# 09 | 写好 Instructions
 
 ## 🎯 学习目标
 
@@ -8,16 +8,16 @@
 
 ---
 
-## 📖 概念讲解
-
-### Instructions 是 Skill 的核心
+## Instructions 是 Skill 的核心
 
 Instructions（操作指南）是 SKILL.md 的灵魂。Instructions 写得不好，Skill 就只是个"摆设"。
 
 **Instructions 的目标**：
 > 让 AI 看完后，每次执行路径一致。不依赖模型"猜"，而是按你写的流程走。
 
-### 把专家经验转成 Instructions
+---
+
+## 把专家经验转成 Instructions
 
 专家经验往往是**隐性知识**——你知道怎么做，但说不清楚。写 Instructions 就是把隐性知识显性化。
 
@@ -48,7 +48,9 @@ Instructions（操作指南）是 SKILL.md 的灵魂。Instructions 写得不好
 - Security 没通过，不得跳过其他步骤
 ```
 
-### 触发条件的写法
+---
+
+## 触发条件的写法
 
 触发条件（When to Use）写不好，AI 会在不该触发的时候触发，或该触发的时候不触发。
 
@@ -62,7 +64,9 @@ Instructions（操作指南）是 SKILL.md 的灵魂。Instructions 写得不好
 **✅ 明确不适用场景：**
 > "不适用：用户只是想聊天、没有具体代码、或要求做代码修改而非审查。"
 
-### 输出规范的写法
+---
+
+## 输出规范的写法
 
 没有输出规范，AI 每次输出格式不一致，你没法判断质量。
 
@@ -81,7 +85,9 @@ Instructions（操作指南）是 SKILL.md 的灵魂。Instructions 写得不好
 > ### ✅ Summary
 > 总评：Excellent / Approved / Request Changes"
 
-### 常见错误
+---
+
+## 常见错误
 
 | 错误 | 问题 | 修正 |
 |------|------|------|
@@ -122,4 +128,4 @@ Instructions（操作指南）是 SKILL.md 的灵魂。Instructions 写得不好
 - [ ] 能把一个领域的专家流程转成结构化 Instructions 吗？
 - [ ] 能写清楚触发条件和输出规范吗？
 
-继续学习：[04 - Skill 的编排与组合](./04-skill-composition.md)
+继续学习：[10 - Skill 编排与发布](./10-Skill编排与发布.md)
