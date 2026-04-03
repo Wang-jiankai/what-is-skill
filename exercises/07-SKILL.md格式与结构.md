@@ -1,4 +1,4 @@
-# 02 | 练习：SKILL.md 结构
+# 07 | 练习：SKILL.md 格式与结构
 
 ## 🎯 练习目标
 
@@ -60,5 +60,5 @@ description:
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/02-skill-structure.md`](../concepts/02-skill-structure.md)
-- 参考答案：[`references/02-structure-solution.md`](../references/02-structure-solution.md)
+- 本练习对应的概念文章：[`concepts/07-SKILL.md格式与结构.md`](../concepts/07-SKILL.md格式与结构.md)
+- 参考答案：[`references/07-structure-solution.md`](../references/07-structure-solution.md)

@@ -1,40 +1,34 @@
-# 01 | 参考答案：理解 Agent Skill
+# 01 | 参考答案：Skill 的多种含义
 
 ## 📋 基础任务参考答案
 
-### 问题 1：为什么 AI 审查结果不稳定？Skill 能怎么解决？
+### 任务 1：填写下表
 
-**问题根因**：
-> AI 每次审查靠"推理"决定审什么、审多细。没有标准流程，所以每次结果不一样。
+| 场景 | 哪种 Skill？ |
+|------|-------------|
+| 用户在 Claude Code 中输入 `/ask "这个函数干啥的"` | Claude Code 内置 Skill |
+| 用户配置了 `commands.json`，定义了一个 `/deploy` 命令 | 自定义斜杠命令 |
+| 一个插件的 `skills/` 目录下有 `SKILL.md` 文件 | Plugin Skill |
+| agentskills.io 上发布的 `SKILL.md` 文件 | Agent Skills 开放标准 |
+| Claude Code 内置的 `/loop` 定时任务 | Claude Code 内置 Skill |
+| 用户在 `~/.claude/commands.json` 中定义的斜杠命令 | 自定义斜杠命令 |
 
-**Skill 的解决方式**：
-> 把代码审查写成 Skill，强制 AI 按固定顺序审查：
-> 1. Security（始终第一）
-> 2. Correctness
-> 3. Performance
-> 4. Style
->
-> 有了 Skill，AI 不再"自由发挥"，而是"按 SOP 执行"。
+### 任务 2：判断对错
 
-### 问题 2：Skill vs MCP
+- [x] Claude Code 的 `/ask` 和 agentskills.io 的 Skill 是同一个东西 — **错**：不是同一个东西
+- [x] 自定义斜杠命令和 Plugin Skill 本质上都是 prompt 封装 — **对**：都是 prompt 指令
+- [x] Agent Skills 标准可以被任何采纳该标准的工具使用 — **对**：这是开放标准的优势
+- [x] Claude Code Skill 只能在 Claude Code 中使用 — **对**：这是 Claude Code 专有的
 
-| 场景 | 该用哪个 | 理由 |
-|------|---------|------|
-| AI 需要读写本地文件 | **MCP** | 这是"能用什么工具"的问题 |
-| AI 需要按"代码规范"审查 | **Skill** | 这是"该怎么做"的问题 |
-| AI 需要调用 GitHub API | **MCP** | 这是"能访问什么外部服务"的问题 |
-| AI 需要按"SOP"写测试报告 | **Skill** | 这是"流程是什么"的问题 |
-| AI 需要查询数据库 | **MCP** | 这是"能访问什么数据"的问题 |
+### 任务 3：思考题答案
 
-### 问题 3：渐进式披露
+Anthropic 没有统一 Skill 机制的原因：
+- **历史演进**：Claude Code Skill 先出现，Agent Skills 是后来定义的开放标准
+- **使用场景不同**：Claude Code Skill 是 CLI 内的子代理，Agent Skills 是跨平台的知识打包格式
+- **复杂度不同**：Claude Code Skill 可以调用工具，Agent Skills 主要是 prompt 指令
 
-**为什么不能全部加载？**
+---
 
-1. **上下文有限**：AI 的上下文窗口有限，全部加载塞不下
-2. **成本**：token 是钱，省 token = 省钱
-3. **速度**：加载太多内容，AI 处理变慢
+## 继续学习
 
-**渐进式的好处**：
-- Level 1 极小，AI 可以"预判"该不该触发
-- 只有触发后，才加载 Level 2 完整流程
-- 按需加载，效率最高
+→ 下一章：[02 - 内置 Skill 深度用法](../concepts/02-内置skill深度用法.md)

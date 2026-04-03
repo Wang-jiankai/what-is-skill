@@ -1,9 +1,10 @@
-# 05 | 练习：实战——把团队 SOP 转成 Skill
+# 11 | 练习：发布你的第一个 Skill
 
 ## 🎯 练习目标
 
-- 掌握把真实工作 SOP 转成 SKILL.md 的完整流程
-- 能在团队场景中应用 Agent Skill
+- 掌握完整的 Skill 开发到发布流程
+- 能独立开发并发布一个可用的 Skill
+- 理解 agentskills.io 的生态
 
 ---
 
@@ -46,15 +47,26 @@
 - 包含完整的 Steps（评审顺序不能乱）
 - 包含 Output Format
 
+**2. 发布检查清单**
+
+在你准备发布 Skill 之前，检查以下项目：
+
+- [ ] YAML 元数据格式正确（name、description）
+- [ ] 触发条件包含具体关键词
+- [ ] Steps 结构化、不模糊
+- [ ] Output Format 明确
+- [ ] 至少一个完整 Example
+- [ ] 本地测试通过
+
 ### 进阶任务（选做）
 
-**调研你团队的最重要 3 个 SOP，然后选择其中 1 个，写成完整的 SKILL.md。**
+**调研你团队的最重要 3 个 SOP，然后选择其中 1 个，写成完整的 SKILL.md，并在本地完成测试。**
 
 ---
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/05-real-world-practice.md`](../concepts/05-real-world-practice.md)
-- 参考答案：[`references/05-practice-solution.md`](../references/05-practice-solution.md)
+- 本练习对应的概念文章：[`concepts/11-发布你的第一个Skill.md`](../concepts/11-发布你的第一个Skill.md)
+- 参考答案：[`references/11-publish-solution.md`](../references/11-publish-solution.md)
 
-> **注意**：这是最后一章。完成后，整个 Skill 仓库的 5 章内容你就全部学完了！
+> **注意**：这是最后一章。完成后，整个 Skill 仓库的 11 章内容你就全部学完了！

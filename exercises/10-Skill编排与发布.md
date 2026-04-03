@@ -1,10 +1,11 @@
-# 04 | 练习：Skill 的编排与组合
+# 10 | 练习：Skill 编排与发布
 
 ## 🎯 练习目标
 
 - 理解 Skill 之间的并行与串行关系
 - 掌握设计 Skill 触发优先级的方法
 - 能识别并解决 Skill 冲突
+- 了解发布到 agentskills.io 的流程
 
 ---
 
@@ -44,21 +45,27 @@
 这两个 Skill 冲突吗？为什么？
 如何修正？
 
-**3. 设计触发优先级：**
+**3. 发布流程排序：**
 
-有两个 Skill 都可能匹配"设计数据库"的需求：
-- `api-design`：通用 API 设计
-- `database-schema`：数据库设计
+把以下步骤按正确顺序排列：
 
-如何通过命名和描述暗示触发优先级？
+```
+A. 在 Claude Code 中测试
+B. 编写完整的 SKILL.md
+C. 提交到 agentskills.io
+D. 确定 Skill 的使用场景
+E. 收集用户反馈并迭代
+```
+
+正确的顺序应该是：___ → ___ → ___ → ___ → ___
 
 ### 进阶任务（选做）
 
-**为你常用的一个工作流，设计 3 个互相配合的 Skill，并说明它们的关系（并行/串行）。**
+**为你常用的一个工作流，设计 3 个互相配合的 Skill，并说明它们的关系（并行/串行），然后模拟发布流程。**
 
 ---
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/04-skill-composition.md`](../concepts/04-skill-composition.md)
-- 参考答案：[`references/04-composition-solution.md`](../references/04-composition-solution.md)
+- 本练习对应的概念文章：[`concepts/10-Skill编排与发布.md`](../concepts/10-Skill编排与发布.md)
+- 参考答案：[`references/10-skill-orchestration-solution.md`](../references/10-skill-orchestration-solution.md)

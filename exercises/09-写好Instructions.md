@@ -1,4 +1,4 @@
-# 03 | 练习：写好 Instructions
+# 09 | 练习：写好 Instructions
 
 ## 🎯 练习目标
 
@@ -44,8 +44,9 @@
 
 场景：技术方案评审 Skill
 
-触发条件应该包含哪些关键词？
-什么情况下**不应该**触发这个 Skill？
+- 触发条件应该包含哪些关键词？
+- 什么情况下**不应该**触发这个 Skill？
+- 有哪些 Edge Cases 需要处理？
 
 ### 进阶任务（选做）
 
@@ -55,5 +56,5 @@
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/03-writing-instructions.md`](../concepts/03-writing-instructions.md)
-- 参考答案：[`references/03-instructions-solution.md`](../references/03-instructions-solution.md)
+- 本练习对应的概念文章：[`concepts/09-写好Instructions.md`](../concepts/09-写好Instructions.md)
+- 参考答案：[`references/09-instructions-solution.md`](../references/09-instructions-solution.md)
