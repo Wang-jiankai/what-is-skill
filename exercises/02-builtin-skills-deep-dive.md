@@ -55,5 +55,5 @@
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/02-内置skill深度用法.md`](../concepts/02-内置skill深度用法.md)
-- 参考答案：[`references/02-builtin-skill-solution.md`](../references/02-builtin-skill-solution.md)
+- 本练习对应的概念文章：[`concepts/02-builtin-skills-deep-dive.md`](../concepts/02-builtin-skills-deep-dive.md)
+- 参考答案：[`references/02-builtin-skills-deep-dive-solution.md`](../references/02-builtin-skills-deep-dive-solution.md)

@@ -167,4 +167,4 @@ code-review/
 - [ ] 能说出三个 Level 的区别吗？
 - [ ] 知道什么场景需要加载 Level 3 资源吗？
 
-继续学习：[09 - 写好 Instructions](./09-写好Instructions.md)
+继续学习：[09 - 写好 Instructions](./09-writing-instructions.md)

@@ -245,4 +245,4 @@ description: 检查 API 文档完整性
 - [ ] 能设计一个多 Skill 协作的流程吗？
 - [ ] 知道如何避免 Skill 之间的循环依赖吗？
 
-继续学习：[06 - 团队 SOP 转斜杠命令](./06-团队SOP转斜杠命令.md)
+继续学习：[06 - 团队 SOP 转斜杠命令](./06-team-sop-commands.md)

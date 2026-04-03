@@ -60,5 +60,5 @@
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/03-自定义斜杠命令.md`](../concepts/03-自定义斜杠命令.md)
-- 参考答案：[`references/03-custom-command-solution.md`](../references/03-custom-command-solution.md)
+- 本练习对应的概念文章：[`concepts/03-custom-commands.md`](../concepts/03-custom-commands.md)
+- 参考答案：[`references/03-custom-commands-solution.md`](../references/03-custom-commands-solution.md)

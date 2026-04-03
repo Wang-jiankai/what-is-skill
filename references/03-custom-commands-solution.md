@@ -49,4 +49,4 @@
 
 ## 继续学习
 
-→ 下一章：[04 - Plugin Skill 开发](../concepts/04-plugin-skill开发.md)
+→ 下一章：[04 - Plugin Skill 开发](../concepts/04-plugin-skills.md)

@@ -69,5 +69,5 @@
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/06-团队SOP转斜杠命令.md`](../concepts/06-团队SOP转斜杠命令.md)
-- 参考答案：[`references/06-team-sop-solution.md`](../references/06-team-sop-solution.md)
+- 本练习对应的概念文章：[`concepts/06-team-sop-commands.md`](../concepts/06-team-sop-commands.md)
+- 参考答案：[`references/06-team-sop-commands-solution.md`](../references/06-team-sop-commands-solution.md)

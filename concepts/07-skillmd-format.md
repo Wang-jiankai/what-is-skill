@@ -106,4 +106,4 @@ description: 团队代码审查 SOP。当用户说 "review this PR" 或 "审查�
 - [ ] 能写出规范格式的 YAML 元数据吗？
 - [ ] 能判断一个 SKILL.md 正文是结构化还是模糊的吗？
 
-继续学习：[08 - 渐进式披露原理](./08-渐进式披露原理.md)
+继续学习：[08 - 渐进式披露原理](./08-progressive-disclosure.md)

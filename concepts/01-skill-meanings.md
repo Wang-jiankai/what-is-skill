@@ -110,4 +110,4 @@ description: 当用户说...时触发
 - [ ] 能说清楚 Claude Code Skill 和 Agent Skills 的区别吗？
 - [ ] 知道什么时候用自定义斜杠命令，什么时候用 Plugin Skill 吗？
 
-继续学习：[02 - Claude Code 内置 Skill 深度用法](./02-内置skill深度用法.md)
+继续学习：[02 - Claude Code 内置 Skill 深度用法](./02-builtin-skills-deep-dive.md)

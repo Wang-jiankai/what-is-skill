@@ -234,4 +234,4 @@ Plugin Skill 调用工具时，同样受 `permissions.defaultMode` 控制。
 - [ ] 能说出 Plugin Skill 和自定义斜杠命令的适用场景差异吗？
 - [ ] 知道 Plugin Skill 的文件结构吗？
 
-继续学习：[05 - Skill 编排与组合](./05-skill编排与组合.md)
+继续学习：[05 - Skill 编排与组合](./05-skill-orchestration.md)

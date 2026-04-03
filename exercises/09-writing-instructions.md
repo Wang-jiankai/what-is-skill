@@ -56,5 +56,5 @@
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/09-写好Instructions.md`](../concepts/09-写好Instructions.md)
-- 参考答案：[`references/09-instructions-solution.md`](../references/09-instructions-solution.md)
+- 本练习对应的概念文章：[`concepts/09-writing-instructions.md`](../concepts/09-writing-instructions.md)
+- 参考答案：[`references/09-writing-instructions-solution.md`](../references/09-writing-instructions-solution.md)

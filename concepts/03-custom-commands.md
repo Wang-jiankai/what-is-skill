@@ -189,4 +189,4 @@
 - [ ] 能写出一个规范的 `commands.json` 吗？
 - [ ] 知道项目级和用户级命令的优先级吗？
 
-继续学习：[04 - Plugin Skill 开发](./04-plugin-skill开发.md)
+继续学习：[04 - Plugin Skill 开发](./04-plugin-skills.md)

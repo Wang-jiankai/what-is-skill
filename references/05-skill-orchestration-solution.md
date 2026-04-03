@@ -88,4 +88,4 @@ description: 通用 API 设计原则。适用于更广泛的系统设计讨论�
 
 ## 继续学习
 
-→ 下一章：[06 - 团队 SOP 转斜杠命令](../concepts/06-团队SOP转斜杠命令.md)
+→ 下一章：[06 - 团队 SOP 转斜杠命令](../concepts/06-team-sop-commands.md)

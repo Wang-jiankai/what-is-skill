@@ -69,20 +69,26 @@ level 3 (if needed): scripts / references — executable code and reference docs
 
 ## 💡 Core Concepts
 
-### 1. What is Agent Skill
-Understanding the problem Skill solves and how it differs from MCP.
+### Part 1: Claude Code Skill Mechanisms (Use Now)
 
-### 2. SKILL.md Structure
-YAML metadata + Markdown body. The anatomy of a real Skill file.
+| Chapter | Topic | Description |
+|---------|-------|-------------|
+| 01 | Skill Meanings | Claude Code `/skills`, Agent Skills, MCP Tools — sorting out the confusion |
+| 02 | Built-in Skills Deep Dive | `/ask`, `/search`, `/loop`, `/simplify` advanced techniques |
+| 03 | Custom Slash Commands | Package frequent operations with `commands.json` |
+| 04 | Plugin Skill Development | Create Skills in plugins and call tools |
+| 05 | Skill Orchestration | Multi-Skill collaboration for complex tasks |
+| 06 | Team SOP to Slash Commands | Turn team standards into one-click commands |
 
-### 3. Writing High-Quality Instructions
-The core skill: turning expert knowledge into clear, AI-executable steps.
+### Part 2: Agent Skills Open Standard (Future-Ready)
 
-### 4. Skill Composition & Chaining
-Combining multiple Skills for complex workflows.
-
-### 5. From Team SOP to Skill
-Converting real-world workflows into installable Skills.
+| Chapter | Topic | Description |
+|---------|-------|-------------|
+| 07 | SKILL.md Format & Structure | YAML metadata + Markdown body |
+| 08 | Progressive Disclosure | Level 1/2/3 on-demand loading design |
+| 09 | Writing Instructions | Structure expert knowledge without ambiguity |
+| 10 | Skill Orchestration & Publishing | Multi-Skill collaboration + agentskills.io publishing |
+| 11 | Publish Your First Skill | Complete walkthrough from topic selection to publishing |
 
 ---
 
@@ -142,12 +148,18 @@ what-is-skill/
 ├── README_EN.md          # Project overview (English)
 ├── LICENSE               # MIT License
 │
-├── concepts/             # 📚 Core concept articles
-│   ├── 01-what-is-skill.md
-│   ├── 02-skill-structure.md
-│   ├── 03-writing-instructions.md
-│   ├── 04-skill-composition.md
-│   └── 05-real-world-practice.md
+├── concepts/             # 📚 Core concept articles (11 chapters)
+│   ├── 01-skill-meanings.md
+│   ├── 02-builtin-skills-deep-dive.md
+│   ├── 03-custom-commands.md
+│   ├── 04-plugin-skills.md
+│   ├── 05-skill-orchestration.md
+│   ├── 06-team-sop-commands.md
+│   ├── 07-skillmd-format.md
+│   ├── 08-progressive-disclosure.md
+│   ├── 09-writing-instructions.md
+│   ├── 10-skill-orchestration-and-publishing.md
+│   └── 11-publishing-first-skill.md
 │
 ├── examples/             # 💡 Real Skill examples (SKILL.md files)
 │   ├── 01-code-review-skill.md
@@ -156,19 +168,31 @@ what-is-skill/
 │   ├── 04-debug-skill.md
 │   └── 05-data-analysis-skill.md
 │
-├── exercises/           # 🏋️ Exercises
-│   ├── 01-basic-exercise.md
-│   ├── 02-structure-exercise.md
-│   ├── 03-instructions-exercise.md
-│   ├── 04-composition-exercise.md
-│   └── 05-practice-exercise.md
+├── exercises/            # 🏋️ Exercises (one per chapter)
+│   ├── 01-skill-meanings.md
+│   ├── 02-builtin-skills-deep-dive.md
+│   ├── 03-custom-commands.md
+│   ├── 04-plugin-skills.md
+│   ├── 05-skill-orchestration.md
+│   ├── 06-team-sop-commands.md
+│   ├── 07-skillmd-format.md
+│   ├── 08-progressive-disclosure.md
+│   ├── 09-writing-instructions.md
+│   ├── 10-skill-orchestration-and-publishing.md
+│   └── 11-publishing-first-skill.md
 │
-└── references/          # 📝 Reference solutions
-    ├── 01-basic-solution.md
-    ├── 02-structure-solution.md
-    ├── 03-instructions-solution.md
-    ├── 04-composition-solution.md
-    └── 05-practice-solution.md
+└── references/           # 📝 Reference solutions
+    ├── 01-skill-meanings-solution.md
+    ├── 02-builtin-skills-deep-dive-solution.md
+    ├── 03-custom-commands-solution.md
+    ├── 04-plugin-skills-solution.md
+    ├── 05-skill-orchestration-solution.md
+    ├── 06-team-sop-commands-solution.md
+    ├── 07-skillmd-format-solution.md
+    ├── 08-progressive-disclosure-solution.md
+    ├── 09-writing-instructions-solution.md
+    ├── 10-skill-orchestration-and-publishing-solution.md
+    └── 11-publishing-first-skill-solution.md
 ```
 
 > **Note**: The Skill repository's core artifact is `.md` files (SKILL.md), not code. All examples are real, installable Skill files.

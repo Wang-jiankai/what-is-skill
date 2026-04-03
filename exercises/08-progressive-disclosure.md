@@ -66,5 +66,5 @@ description: 代码审查 SOP
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/08-渐进式披露原理.md`](../concepts/08-渐进式披露原理.md)
+- 本练习对应的概念文章：[`concepts/08-progressive-disclosure.md`](../concepts/08-progressive-disclosure.md)
 - 参考答案：[`references/08-progressive-disclosure-solution.md`](../references/08-progressive-disclosure-solution.md)

@@ -67,5 +67,5 @@ E. 收集用户反馈并迭代
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/10-Skill编排与发布.md`](../concepts/10-Skill编排与发布.md)
-- 参考答案：[`references/10-skill-orchestration-refactor.md`](../references/10-skill-orchestration-refactor.md)
+- 本练习对应的概念文章：[`concepts/10-skill-orchestration-and-publishing.md`](../concepts/10-skill-orchestration-and-publishing.md)
+- 参考答案：[`references/10-skill-orchestration-and-publishing-solution.md`](../references/10-skill-orchestration-and-publishing-solution.md)

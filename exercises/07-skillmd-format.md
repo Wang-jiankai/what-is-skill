@@ -60,5 +60,5 @@ description:
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/07-SKILL.md格式与结构.md`](../concepts/07-SKILL.md格式与结构.md)
-- 参考答案：[`references/07-structure-solution.md`](../references/07-structure-solution.md)
+- 本练习对应的概念文章：[`concepts/07-skillmd-format.md`](../concepts/07-skillmd-format.md)
+- 参考答案：[`references/07-skillmd-format-solution.md`](../references/07-skillmd-format-solution.md)

@@ -128,4 +128,4 @@ Instructions（操作指南）是 SKILL.md 的灵魂。Instructions 写得不好
 - [ ] 能把一个领域的专家流程转成结构化 Instructions 吗？
 - [ ] 能写清楚触发条件和输出规范吗？
 
-继续学习：[10 - Skill 编排与发布](./10-Skill编排与发布.md)
+继续学习：[10 - Skill 编排与发布](./10-skill-orchestration-and-publishing.md)

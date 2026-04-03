@@ -27,4 +27,4 @@
 
 ## 继续学习
 
-→ 下一章：[07 - SKILL.md 格式与结构](../concepts/07-SKILL.md格式与结构.md)
+→ 下一章：[07 - SKILL.md 格式与结构](../concepts/07-skillmd-format.md)

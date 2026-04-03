@@ -58,4 +58,4 @@ code-review/
 
 ## 继续学习
 
-→ 下一章：[09 - 写好 Instructions](../concepts/09-写好Instructions.md)
+→ 下一章：[09 - 写好 Instructions](../concepts/09-writing-instructions.md)

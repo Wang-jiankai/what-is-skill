@@ -211,4 +211,4 @@
 - [ ] 能把团队 SOP 转成 commands.json 吗？
 - [ ] 知道如何分发和维护斜杠命令吗？
 
-继续学习：[07 - SKILL.md 格式与结构](./07-SKILL.md格式与结构.md)
+继续学习：[07 - SKILL.md 格式与结构](./07-skillmd-format.md)

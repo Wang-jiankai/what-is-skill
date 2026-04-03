@@ -66,7 +66,7 @@
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/11-发布你的第一个Skill.md`](../concepts/11-发布你的第一个Skill.md)
-- 参考答案：[`references/11-publish-solution.md`](../references/11-publish-solution.md)
+- 本练习对应的概念文章：[`concepts/11-publishing-first-skill.md`](../concepts/11-publishing-first-skill.md)
+- 参考答案：[`references/11-publishing-first-skill-solution.md`](../references/11-publishing-first-skill-solution.md)
 
 > **注意**：这是最后一章。完成后，整个 Skill 仓库的 11 章内容你就全部学完了！

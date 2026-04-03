@@ -45,5 +45,5 @@
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/01-skill的多重含义.md`](../concepts/01-skill的多重含义.md)
-- 参考答案：[`references/01-basic-solution.md`](../references/01-basic-solution.md)
+- 本练习对应的概念文章：[`concepts/01-skill-meanings.md`](../concepts/01-skill-meanings.md)
+- 参考答案：[`references/01-skill-meanings-solution.md`](../references/01-skill-meanings-solution.md)

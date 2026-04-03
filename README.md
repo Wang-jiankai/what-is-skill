@@ -41,22 +41,22 @@
 
 | 章节 | 主题 | 一句话 |
 |------|------|--------|
-| 01 | [Skill 的多种含义](./concepts/01-skill的多重含义.md) | 厘清 Claude Code Skill 和 Agent Skills 的区别 |
-| 02 | [内置 Skill 深度用法](./concepts/02-内置skill深度用法.md) | `/ask`、`/search`、`/loop`、`/simplify` 进阶技巧 |
-| 03 | [自定义斜杠命令](./concepts/03-自定义斜杠命令.md) | 用 `commands.json` 封装高频操作 |
-| 04 | [Plugin Skill 开发](./concepts/04-plugin-skill开发.md) | 在插件中创建 Skill 并调用工具 |
-| 05 | [Skill 编排与组合](./concepts/05-skill编排与组合.md) | 多 Skill 协作完成复杂任务 |
-| 06 | [团队 SOP 转斜杠命令](./concepts/06-团队SOP转斜杠命令.md) | 把团队标准流程变成一键命令 |
+| 01 | [Skill 的多种含义](./concepts/01-skill-meanings.md) | 厘清 Claude Code Skill 和 Agent Skills 的区别 |
+| 02 | [内置 Skill 深度用法](./concepts/02-builtin-skills-deep-dive.md) | `/ask`、`/search`、`/loop`、`/simplify` 进阶技巧 |
+| 03 | [自定义斜杠命令](./concepts/03-custom-commands.md) | 用 `commands.json` 封装高频操作 |
+| 04 | [Plugin Skill 开发](./concepts/04-plugin-skills.md) | 在插件中创建 Skill 并调用工具 |
+| 05 | [Skill 编排与组合](./concepts/05-skill-orchestration.md) | 多 Skill 协作完成复杂任务 |
+| 06 | [团队 SOP 转斜杠命令](./concepts/06-team-sop-commands.md) | 把团队标准流程变成一键命令 |
 
 ### Part 2：Agent Skills 开放标准（面向未来）
 
 | 章节 | 主题 | 一句话 |
 |------|------|--------|
-| 07 | [SKILL.md 格式与结构](./concepts/07-SKILL.md格式与结构.md) | YAML 元数据 + Markdown 正文 |
-| 08 | [渐进式披露原理](./concepts/08-渐进式披露原理.md) | Level 1/2/3 按需加载设计 |
-| 09 | [写好 Instructions](./concepts/09-写好Instructions.md) | 把专家经验结构化、不模糊 |
-| 10 | [Skill 编排与发布](./concepts/10-Skill编排与发布.md) | 多 Skill 协作 + agentskills.io 发布 |
-| 11 | [发布你的第一个 Skill](./concepts/11-发布你的第一个Skill.md) | 从选题到发布的完整实战 |
+| 07 | [SKILL.md 格式与结构](./concepts/07-skillmd-format.md) | YAML 元数据 + Markdown 正文 |
+| 08 | [渐进式披露原理](./concepts/08-progressive-disclosure.md) | Level 1/2/3 按需加载设计 |
+| 09 | [写好 Instructions](./concepts/09-writing-instructions.md) | 把专家经验结构化、不模糊 |
+| 10 | [Skill 编排与发布](./concepts/10-skill-orchestration-and-publishing.md) | 多 Skill 协作 + agentskills.io 发布 |
+| 11 | [发布你的第一个 Skill](./concepts/11-publishing-first-skill.md) | 从选题到发布的完整实战 |
 
 ---
 
@@ -125,17 +125,17 @@ what-is-skill/
 ├── LICENSE               # MIT 开源许可证
 │
 ├── concepts/             # 📚 核心概念文章（11 章）
-│   ├── 01-skill的多重含义.md
-│   ├── 02-内置skill深度用法.md
-│   ├── 03-自定义斜杠命令.md
-│   ├── 04-plugin-skill开发.md
-│   ├── 05-skill编排与组合.md
-│   ├── 06-团队SOP转斜杠命令.md
-│   ├── 07-SKILL.md格式与结构.md
-│   ├── 08-渐进式披露原理.md
-│   ├── 09-写好Instructions.md
-│   ├── 10-Skill编排与发布.md
-│   └── 11-发布你的第一个Skill.md
+│   ├── 01-skill-meanings.md
+│   ├── 02-builtin-skills-deep-dive.md
+│   ├── 03-custom-commands.md
+│   ├── 04-plugin-skills.md
+│   ├── 05-skill-orchestration.md
+│   ├── 06-team-sop-commands.md
+│   ├── 07-skillmd-format.md
+│   ├── 08-progressive-disclosure.md
+│   ├── 09-writing-instructions.md
+│   ├── 10-skill-orchestration-and-publishing.md
+│   └── 11-publishing-first-skill.md
 │
 ├── examples/             # 💡 Skill 示例
 │   ├── 01-code-review-skill.md

@@ -69,5 +69,5 @@
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/05-skill编排与组合.md`](../concepts/05-skill编排与组合.md)
+- 本练习对应的概念文章：[`concepts/05-skill-orchestration.md`](../concepts/05-skill-orchestration.md)
 - 参考答案：[`references/05-skill-orchestration-solution.md`](../references/05-skill-orchestration-solution.md)

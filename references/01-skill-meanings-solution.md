@@ -31,4 +31,4 @@ Anthropic 没有统一 Skill 机制的原因：
 
 ## 继续学习
 
-→ 下一章：[02 - 内置 Skill 深度用法](../concepts/02-内置skill深度用法.md)
+→ 下一章：[02 - 内置 Skill 深度用法](../concepts/02-builtin-skills-deep-dive.md)

@@ -56,5 +56,5 @@
 
 ## 💡 提示
 
-- 本练习对应的概念文章：[`concepts/04-plugin-skill开发.md`](../concepts/04-plugin-skill开发.md)
-- 参考答案：[`references/04-plugin-skill-solution.md`](../references/04-plugin-skill-solution.md)
+- 本练习对应的概念文章：[`concepts/04-plugin-skills.md`](../concepts/04-plugin-skills.md)
+- 参考答案：[`references/04-plugin-skills-solution.md`](../references/04-plugin-skills-solution.md)

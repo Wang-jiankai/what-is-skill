@@ -256,4 +256,4 @@ Claude Code 提供了以下内置 Skill：
 - [ ] 能说出 /ask 和 /search 的使用场景差异吗？
 - [ ] 知道 /loop 在 `disableSkillShellExecution: true` 下会怎样吗？
 
-继续学习：[03 - 自定义斜杠命令](./03-自定义斜杠命令.md)
+继续学习：[03 - 自定义斜杠命令](./03-custom-commands.md)

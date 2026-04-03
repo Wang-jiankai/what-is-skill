@@ -47,4 +47,4 @@ db-toolkit/
 
 ## 继续学习
 
-→ 下一章：[05 - Skill 编排与组合](../concepts/05-skill编排与组合.md)
+→ 下一章：[05 - Skill 编排与组合](../concepts/05-skill-orchestration.md)
